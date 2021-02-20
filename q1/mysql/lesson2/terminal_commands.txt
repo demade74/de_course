@@ -1,0 +1,7 @@
+-- dumping db
+mysqldump example > example_dump.sql
+-- reloading backup
+mysqladmin create sample
+mysql sample < example_dump.sql
+-- dumping table with 100 rows
+mysqldump --where "1 limit 100" mysql help_keyword > mysql_dump.sql
