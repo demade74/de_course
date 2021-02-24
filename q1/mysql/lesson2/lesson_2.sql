@@ -4,6 +4,6 @@ CREATE DATABASE example;
 USE example;
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
-	id SERIAL PRIMARY KEY,
+	id INT PRIMARY KEY,
 	name CHAR(20) DEFAULT 'anonymous' 
 );
