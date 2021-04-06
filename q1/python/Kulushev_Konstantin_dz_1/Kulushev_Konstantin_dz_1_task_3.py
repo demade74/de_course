@@ -2,10 +2,15 @@ percent = 'процент'
 while True:
     try:
         percent_value = int(input("Введите количество процентов: "))
-        break
     except ValueError:
         print("Необходимо ввести целое число. Попробуйте еще раз.")
         continue
+
+    if percent_value > 20:
+        print("Максимально допустимое значение - 20. Попробуйте еще раз.")
+        continue
+    else:
+        break
 
 if percent_value == 1:
     print(str(percent_value), percent)
