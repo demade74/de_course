@@ -45,6 +45,6 @@ with DAG(
 
     tasks_list = list(tasks.values())
     for idx, task in enumerate(tasks_list):
-        if idx == len(tasks.values()) - 1:
+        if idx == len(tasks_list) - 1:
             break
         tasks_list[idx] >> tasks_list[idx + 1]
